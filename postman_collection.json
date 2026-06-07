@@ -1,0 +1,175 @@
+{
+  "info": {
+    "name": "holiday-checker API",
+    "description": "BT Builds API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://holiday-checker-pink.vercel.app",
+      "type": "string"
+    },
+    {
+      "key": "api_key",
+      "value": "free-demo-key",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Check Holiday",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/check",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "check"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"date\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Holidays In Month",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/month",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "month"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"year\": 0,\n  \"month\": 0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Holidays In Range",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/range",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "range"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Holidays In Year",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/years/{year}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "years",
+            "{year}"
+          ]
+        }
+      }
+    }
+  ]
+}

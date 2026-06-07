@@ -71,3 +71,6 @@ curl https://holiday-checker-pink.vercel.app/years/2024 \
 ## Monetize
 
 List on RapidAPI for $15-29/month. Target: payroll services, HR software, scheduling apps, small business tools.
+
+## Postman
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://raw.githubusercontent.com/BT-Builds/holiday-checker/main/postman_collection.json)
